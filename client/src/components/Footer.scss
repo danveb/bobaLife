@@ -1,0 +1,123 @@
+.footer-container {
+    display: flex; 
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column; 
+    }
+}
+
+.footer-left {
+    flex: 1; 
+    margin: 30px; 
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px; 
+
+    @media screen and (max-width: 768px) {
+        margin: 10px 30px; 
+        padding: 10px; 
+    }
+}
+
+.footer-title {
+    margin-bottom: 30px; 
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 20px; 
+    }
+}
+
+.footer-contact {
+    margin-bottom: 20px; 
+    display: flex; 
+    align-items: center; 
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 10px; 
+    }
+}
+
+.footer-center {
+    flex: 1; 
+    margin: 30px; 
+    padding: 20px; 
+
+    @media screen and (max-width: 768px) {
+        margin: 10px 30px; 
+        padding: 10px; 
+    }
+}
+
+.footer-list {
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+.footer-listItem {
+    width: 100%; 
+    margin-bottom: 10px; 
+}
+
+.footer-right {
+    flex: 1;
+    margin: 30px; 
+    padding: 20px; 
+
+    @media screen and (max-width: 768px) {
+        margin: 10px 30px; 
+        padding: 10px; 
+    }
+}
+
+.footer-brand {
+    margin-bottom: 30px; 
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 20px; 
+    }
+}
+
+.footer-subtitle {
+    margin-bottom: 20px; 
+}
+
+.footer-socialContainer {
+    display: flex; 
+}
+
+.footer-socialIcon {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    margin-right: 20px; 
+
+    a {
+        color: #fff; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    &:nth-child(1) {
+        background-color: #3b5999;
+    }
+
+    &:nth-child(2) {
+        background-color: #e4405f; 
+    }
+
+    &:nth-child(3) {
+        background-color: #e60023;
+    }
+
+    &:nth-child(4) {
+        background-color: #55acee; 
+    }
+}
