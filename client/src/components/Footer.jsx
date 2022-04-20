@@ -1,4 +1,4 @@
-import { FaGlobeAmericas, FaWhatsapp, FaEnvelopeOpen, FaRegCreditCard, FaFacebookF, FaInstagram, FaPinterest, FaTwitter } from "react-icons/fa"; 
+import { FaGlobeAmericas, FaWhatsapp, FaEnvelopeOpen, FaRegCreditCard, FaFacebookF, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa"; 
 import "./Footer.scss"; 
 
 const Footer = () => {
@@ -34,11 +34,11 @@ const Footer = () => {
                     <div className="footer-socialIcon" color="e4405f">
                         <a href="https://www.instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
                     </div>
-                    <div className="footer-socialIcon" color="e60023">
-                        <a href="https://www.pinterest.com" target="_blank" rel="noreferrer"><FaPinterest /></a>
-                    </div>
                     <div className="footer-socialIcon" color="55acee">
-                    <a href="https://www.twitter.com" target="_blank" rel="noreferrer"><FaTwitter /></a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noreferrer"><FaTwitter /></a>
+                    </div>
+                    <div className="footer-socialIcon" color="000000">
+                        <a href="https://www.github.com/danveb" target="_blank" rel="noreferrer"><FaGithub /></a>
                     </div>
                 </div>
             </div>    
