@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; 
 import { linkItems } from "../constants/data";
 import { GiBoba } from "react-icons/gi"; 
 import "./Navbar.scss"; 
@@ -25,6 +26,12 @@ const Navbar = () => {
                             </a>
                         </li>
                     ))}
+                        <li className="nav-menuItem">
+                            <Link to="/login">Login</Link>
+                        </li>
+                        <li className="nav-menuItem">
+                            <Link to="/register">Register</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
