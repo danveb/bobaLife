@@ -5,13 +5,13 @@
     top: 0; 
     z-index: 5; 
     background-color: #fff; 
+    padding: 10px 20px; 
 }
 
 .nav-wrapper {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    padding: 10px 20px; 
     
     @media screen and (max-width: 480px) {
         padding: 10px; 
@@ -75,4 +75,13 @@
         text-decoration: none; 
         color: black; 
     }
+}
+
+.btn-link {
+    border: none; 
+    margin-left: 20px; 
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
 }

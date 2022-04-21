@@ -1,6 +1,9 @@
-import { useState } from "react"; 
-import { Link } from "react-router-dom"; 
-import { NavbarLimited, Footer } from "../components";
+import { useState, useEffect } from "react"; 
+import { Link, useNavigate } from "react-router-dom"; 
+import { useSelector, useDispatch } from "react-redux"; 
+import { toast } from "react-toastify"; 
+import { register, reset } from "../redux/auth/authSlice"; 
+import { NavbarLimited, Footer, Spinner } from "../components/index";
 import "./Register.scss"; 
 
 const Login = () => {
@@ -11,16 +14,59 @@ const Login = () => {
         password: "",
     }); 
 
+    // destructured form data
     const { username, email, password } = formData; 
 
+    // useNavigate
+    const navigate = useNavigate();  
+
+    // useDispatch
+    const dispatch = useDispatch(); 
+
+    // select from state.auth
+    const { user, isLoading, isError, isSuccess, message } = useSelector((state) => state.auth); 
+
+    // useEffect 
+    useEffect(() => {
+        if(isError) {
+            toast.error(message); 
+        }
+        // if success or user logged in? 
+        if(isSuccess || user) {
+            navigate("/")
+        }
+        // dispatch reset() 
+        dispatch(reset()); 
+
+        // dependency array to fire useEffect if there are any changes 
+    }, [user, isError, isSuccess, message, navigate, dispatch]);
+
     // handleChange
-    const handleChange = () => {
-        console.log('Changing')
-    }
+    const handleChange = (e) => {
+        setFormData((prevState) => ({
+            ...prevState, 
+            [e.target.name]: e.target.value
+        })); 
+    }; 
 
     // handleSubmit
     const handleSubmit = (e) => {
         e.preventDefault(); 
+        if(!password) {
+            toast.error("Please enter password")
+        } else {
+            const userData = {
+                username, 
+                email, 
+                password,
+            }
+            // dispatch register with userData
+            dispatch(register(userData)); 
+        }; 
+    }; 
+
+    if(isLoading) {
+        return <Spinner />
     }
 
     return (
