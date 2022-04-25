@@ -24,3 +24,6 @@ yarn-error.log*
 
 # misc images (assets_dump)
 assets_dump
+
+# misc notes 
+setup.js
