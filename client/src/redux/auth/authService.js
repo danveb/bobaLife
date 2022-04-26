@@ -7,11 +7,7 @@ import axios from "axios";
 const register = async (userData) => {
     // make a POST request and pass in userData to URL 
     // const response = await axios.post(API_URL, userData); 
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 6fd14f540dbef904436b5465f42ca8c362c5d753
     // use process.env (deployment)
     const response = await axios.post(process.env.REACT_APP_API_URL, userData); 
     if(response.data) {
@@ -24,11 +20,7 @@ const register = async (userData) => {
 // Login user
 const login = async (userData) => {
     // const response = await axios.post(API_URL + 'sign_in', userData);
-<<<<<<< HEAD
     
-=======
-
->>>>>>> 6fd14f540dbef904436b5465f42ca8c362c5d753
     // use process.env (deployment)
     const response = await axios.post(process.env.REACT_APP_API_URL + '/sign_in', userData);
   
