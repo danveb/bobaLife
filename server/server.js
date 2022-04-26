@@ -20,4 +20,7 @@ app.use(cors());
 // Routes 
 app.use("/api/users", require("./routes/userRoute")); 
 
+// Test 123 
+app.get('/', (req, res) => { res.send('Hello from Express!') })
+
 app.listen(port, () => console.log(`Server started on port ${port}`)); 
