@@ -14,6 +14,7 @@ User login/registration functionality
 - [GitHub](https://github.com/danveb/bobalife)
   
 ## Demo 
+<img src="https://media.giphy.com/media/gjjcgX61oKdHIDCUVo/giphy.gif">
 
 -----
 
