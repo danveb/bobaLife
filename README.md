@@ -14,6 +14,8 @@ User login/registration functionality
 - [GitHub](https://github.com/danveb/bobalife)
   
 ## Demo 
+https://bobalife.netlify.app
+
 <img src="https://media.giphy.com/media/gjjcgX61oKdHIDCUVo/giphy.gif">
 
 -----
