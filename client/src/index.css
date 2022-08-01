@@ -1,19 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Quicksand:wght@300;400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
 
 :root {
-    --color-primary: #006241;
-    --color-secondary: #d50032;
-    --color-dark: #181E21;
-    --color-light: #ffff; 
-    --color-gray: #777777; 
-    --color-extra: #d4e9e2;
+    /* Palette Colors */
+    --raisin-black: #191c26; 
+    --rich-black: #111319; 
+    --cadet-blue-crayola: #a9afc3; 
+    --han-purple: #4831d2; 
+    --fuzzy-wuzzy: #de6868; 
+    --ny-pink: #e89494; 
+    --maximum-blue: #63a3bb; 
+    --languid-lavender: #d2c7d5; 
+    --alice-blue: #f4f9fc; 
+    --alice-blue-matte: #edf2f8; 
+    --prussian-blue: #10345c; 
+    --bottle-green: #006241; 
+    --baby-pink: #f5cac3; 
+
+    /* Considering */
+    --powder-blue: #a1cdce; 
+    --orange-red-crayola: #ff605c; 
+    --maximum-yellow-red: #ffbd44; 
+    --dark-pastel-green: #00ca4e; 
 }
 
 * {
     box-sizing: border-box; 
     margin: 0; 
     padding: 0; 
-    font-family: "Poppins", sans-serif; 
-    font-weight: 200; 
     scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Quicksand", "Poppins", sans-serif; 
+    font-weight: 300; 
 }
