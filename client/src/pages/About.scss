@@ -1,0 +1,88 @@
+.about {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    padding: 0 24px 0 24px; 
+    
+    .about-wrapper {
+        background-color: var(--languid-lavender);
+        display: flex; 
+        justify-content: center; 
+        width: 100%; 
+        padding: 30px; 
+
+        @media screen and(max-width: 768px) {
+            flex-direction: column; 
+        }
+
+        @media screen and(max-width: 480px) {
+            padding: 25px 20px; 
+        }
+
+        .about-left {
+            flex: 1; 
+            display: flex; 
+            justify-content: center; 
+            flex-direction: column;    
+            padding: 40px 40px 40px 0; 
+            max-width: 700px; 
+
+            @media screen and(max-width: 768px) {
+                padding: 20px; 
+            }
+    
+            @media screen and (max-width: 480px) {
+                padding: 20px 0px; 
+            }
+    
+            .about-title {
+                margin: 20px 0; 
+                h3 {
+                    font-size: 26px; 
+                    font-weight: 400; 
+                    text-transform: uppercase; 
+
+                    span {
+                        color: var(--bottle-green); 
+                    }
+
+                    @media screen and(max-width: 786px) {
+                        font-size: 22px; 
+                    }
+                }
+            }
+    
+            .about-description {
+                p {
+                    margin: 20px 0; 
+                    line-height: 2; 
+    
+                    @media screen and(max-width: 768px) {
+                        font-size: 14px; 
+                    }
+                }
+            }
+        }
+    
+        .about-right {
+            flex: 1; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: column; 
+            max-width: 700px; 
+    
+            img {
+                height: auto; 
+                width: 100%; 
+                object-fit: cover; 
+                border-radius: 3px; 
+    
+                @media screen and(max-width: 480px) {
+                    height: 450px; 
+                }
+            }
+        }
+    }
+}

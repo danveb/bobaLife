@@ -16,9 +16,18 @@
     
         .nav-left {
             flex: 1; 
+            width: 50%; 
             display: flex; 
-            justify-content: flex-start; 
+            justify-content: flex-end; 
             align-items: center; 
+
+            @media screen and(max-width: 1200px) {
+                justify-content: center; 
+            }
+
+            @media screen and(max-width: 768px) {
+                justify-content: flex-start; 
+            }
 
             .logo {
                 text-decoration: none; 
@@ -59,9 +68,17 @@
         .nav-right {
             flex: 1; 
             display: flex; 
-            justify-content: flex-end; 
+            justify-content: flex-start; 
             align-items: center; 
             gap: 15px; 
+
+            @media screen and(max-width: 1200px) {
+                justify-content: center; 
+            }
+
+            @media screen and(max-width: 768px) {
+                justify-content: flex-end; 
+            }
 
             svg {
                 display: flex; 

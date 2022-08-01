@@ -1,4 +1,4 @@
-import hero from "../../assets/hero/barista1.jpeg"; 
+import milktea from "../../assets/hero/milktea.png"; 
 import { companies } from "../../constants/companies"; 
 import "./Hero.scss"; 
 
@@ -7,20 +7,21 @@ const Hero = () => {
         <div className="hero">
             <div className="hero-wrapper">
                 <div className="hero-left">
-                    <img src={hero} alt="barista" />
+                    <img src={milktea} alt="milktea" />
                 </div>
                 <div className="hero-right">
                     <div className="hero-title">
                         <h3>Welcome to bobaLife</h3>
+                        <h4>Summer|22</h4>
                     </div>
                     <div className="hero-description">
-                        <p>Book a private bubble tea class with us! Learn the know-how to making the perfect boba, along with a fun hands-on experience for your team. With our staff your team will learn how to properly brew our signature tea, make tapioca from scratch and recreate the classic milk tea with boba.</p>
+                        <p>We have only one obsession, and you guessed it right: boba. Some call it boba, some call it bubble tea, but we all know this word is interchangeable. We are just passionate to share our boba to the world. This is exactly what makes us who we are. We welcome you to a friendly atmosphere delicately curated to serve you a world-class boba on every single cup. Welcome to bobaLife.</p>
                     </div>
                 </div>
             </div>
             <div className="hero-sub">
                 <div className="hero-title">
-                    <h3>Proud to partner with</h3>
+                    <h3>Proud to share bobaLife with</h3>
                 </div>
                 <div className="hero-companies">
                     <ul>
