@@ -1,9 +1,9 @@
 .navbar {
     width: 100%; 
-    position: sticky; 
+    position: relative; 
     top: 0;
-    z-index: 3; 
-    padding: 24px; 
+    z-index: 10; 
+    padding: 24px 24px 0 24px; 
     
     .nav-wrapper {
         width: 100%; 

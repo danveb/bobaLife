@@ -1,0 +1,135 @@
+.hero {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    padding: 0 24px 0 24px; 
+    
+    .hero-wrapper {
+        background-color: var(--languid-lavender);
+        display: flex; 
+        width: 100%; 
+        padding: 30px; 
+
+        @media screen and(max-width: 480px) {
+            flex-direction: column; 
+            padding: 25px 10px; 
+        }
+    
+        .hero-left {
+            flex: 1; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: column; 
+    
+            img {
+                height: auto; 
+                width: 100%; 
+                object-fit: cover; 
+                border-radius: 3px; 
+    
+                @media screen and(max-width: 480px) {
+                    height: 450px; 
+                }
+            }
+        }
+    
+        .hero-right {
+            flex: 1; 
+            display: flex; 
+            justify-content: center; 
+            flex-direction: column;    
+            padding: 40px; 
+    
+            @media screen and (max-width: 480px) {
+                padding: 20px 0px; 
+            }
+    
+            .hero-title {
+                margin: 20px 0; 
+                h3 {
+                    font-size: 26px; 
+                    font-weight: 400; 
+                    text-transform: uppercase; 
+
+                    span {
+                        color: var(--bottle-green); 
+                    }
+
+                    @media screen and(max-width: 786px) {
+                        font-size: 22px; 
+                    }
+                }
+            }
+    
+            .hero-description {
+                p {
+                    
+                    margin: 20px 0; 
+    
+                    @media screen and(max-width: 768px) {
+                        font-size: 14px; 
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-sub {
+        flex: 1;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column; 
+        max-width: 1200px;
+        padding: 30px; 
+
+        @media screen and(max-width: 480px) {
+            padding: 25px 10px; 
+        }
+
+        .hero-title {
+            h3 {
+                margin-bottom: 20px; 
+                font-size: 26px; 
+                font-weight: 400; 
+                text-transform: uppercase; 
+
+                span {
+                    color: var(--bottle-green); 
+                }
+
+                @media screen and(max-width: 786px) {
+                    font-size: 22px; 
+                }
+            }
+        }
+
+        .hero-companies {
+
+            ul {
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                flex-wrap: wrap; 
+                gap: 25px; 
+                list-style: none; 
+
+                img {
+                    height: auto; 
+                    width: 130px; 
+                    object-fit: fit; 
+
+                    @media screen and(max-width: 768px) {
+                        width: 110px; 
+                    }
+
+                    @media screen and(max-width: 480px) {
+                        width: 90px; 
+                    }
+                }
+            }
+        }
+    }
+}
