@@ -3,10 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux"; 
 import { toast } from "react-toastify"; 
 import { register, reset } from "../redux/auth/authSlice"; 
-import { NavbarLimited, Footer, Spinner } from "../components/index";
+import { Navbar, Menu, Spinner } from "../components/index";
 import "./Register.scss"; 
 
-const Login = () => {
+const Register = ({ menuOpen, setMenuOpen }) => {
     // useState 
     const [formData, setFormData] = useState({
         username: "", 
@@ -70,12 +70,12 @@ const Login = () => {
     }
 
     return (
-        <>
-            <NavbarLimited />
-            <div className="register-container">
+        <div>
+            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />            <div className="register">
                 <div className="register-wrapper">
                     <h1>Register</h1>
-                    <p>Please fill out the following:</p>
+                    <p>Please enter your details</p>
                     <form onSubmit={handleSubmit} >
                         <label htmlFor="username" />
                         <input
@@ -109,10 +109,9 @@ const Login = () => {
                     </form>
                 </div>
             </div>
-        <Footer />
-        </>
+        </div>
     )
     
 }
 
-export default Login
+export default Register

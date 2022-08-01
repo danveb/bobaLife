@@ -3,10 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux"; 
 import { toast } from "react-toastify"; 
 import { login, reset } from "../redux/auth/authSlice"; 
-import { NavbarLimited, Footer, Spinner } from "../components";
+import { Navbar, Menu, Spinner } from "../components";
 import "./Login.scss"; 
 
-const Login = () => {
+const Login = ({ menuOpen, setMenuOpen }) => {
     // useState 
     const [formData, setFormData] = useState({
         email: "", 
@@ -61,9 +61,10 @@ const Login = () => {
     }
 
     return (
-        <>
-            <NavbarLimited />
-            <div className="login-container">
+        <div>
+            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <div className="login">
                 <div className="login-wrapper">
                     <h1>Sign In</h1>
                     <p>Please enter your credentials</p>
@@ -92,8 +93,7 @@ const Login = () => {
                     </form>
                 </div>
             </div>
-            <Footer />
-        </>
+        </div>
     )
     
 }
