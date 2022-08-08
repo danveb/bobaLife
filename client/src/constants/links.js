@@ -9,4 +9,9 @@ export const links = [
         text: "About",
         path: "/about",
     }, 
+    {
+        id: 3, 
+        text: "Drinks",
+        path: "/drinks",
+    }, 
 ]; 

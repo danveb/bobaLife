@@ -5,7 +5,7 @@
     .footer-wrapper {
         display: flex;
         width: 100%; 
-        background-color: var(--languid-lavender); 
+        background-color: #57cc99;
 
         @media screen and(max-width: 768px) {
             flex-direction: column; 
@@ -17,31 +17,39 @@
 
         .footer-left {
             flex: 1; 
-            display: flex; 
-            flex-direction: column; 
             padding: 30px; 
-
+            
             @media screen and (max-width: 768px) {
                 padding: 20px 10px 10px 10px; 
             }
-
-            .footer-title {
-                margin-bottom: 30px; 
-
-                h3 {
-                    font-size: 22px; 
-                    font-weight: 300; 
-                }
-    
+            
+                
+            h3 {
+                font-size: 18px; 
+                font-weight: 400; 
+                margin-bottom: 15px; 
+                text-transform: uppercase; 
+                
                 @media screen and (max-width: 768px) {
                     margin-bottom: 20px; 
                 }
             }
-    
+
             .footer-contact {
                 margin-bottom: 20px; 
                 display: flex; 
                 align-items: center; 
+                font-size: 14px; 
+
+                svg {
+                    width: 20px; 
+                    height: 20px; 
+                    margin-right: 10px; 
+                }
+
+                &:nth-child(1) {
+                    background-color: var(--rich-black); 
+                }
     
                 @media screen and (max-width: 768px) {
                     margin-bottom: 10px; 
@@ -56,31 +64,33 @@
             @media screen and (max-width: 768px) {
                 padding: 10px; 
             }
-
-            .footer-title {
-                margin-bottom: 30px; 
-
-                h3 {
-                    font-size: 22px; 
-                    font-weight: 300; 
-                }
-    
+                
+            h3 {
+                font-size: 18px; 
+                font-weight: 400; 
+                margin-bottom: 15px; 
+                text-transform: uppercase; 
+                
                 @media screen and (max-width: 768px) {
                     margin-bottom: 20px; 
                 }
             }
 
-            .footer-list {
-                margin: 0; 
-                padding: 0; 
-                list-style: none; 
+            .footer-contact {
+                margin-bottom: 20px; 
                 display: flex; 
-                flex-wrap: wrap; 
-            }
+                align-items: center; 
+                font-size: 14px; 
 
-            .footer-listItem {
-                width: 100%; 
-                margin-bottom: 10px; 
+                svg {
+                    width: 20px; 
+                    height: 20px; 
+                    margin-right: 10px; 
+                }
+    
+                @media screen and (max-width: 768px) {
+                    margin-bottom: 10px; 
+                }
             }
         }
 
@@ -92,55 +102,59 @@
                 padding: 10px;                 
             }
 
-            .footer-brand {
-                margin-bottom: 30px; 
-
-                h3 {
-                    font-size: 22px; 
-                    font-weight: 300; 
-                }
+            h3 {
+                font-size: 18px; 
+                font-weight: 400; 
+                margin-bottom: 15px; 
     
                 @media screen and (max-width: 768px) {
                     margin-bottom: 20px; 
                 }
             }
     
-            .footer-subtitle {
-                margin-bottom: 20px; 
+            p {
+                font-size: 14px; 
+                margin-bottom: 10px; 
+            }
+
+            h5 {
+                font-size: 11px; 
+                font-weight: 200; 
+                margin-bottom: 10px; 
             }
     
             .footer-socialContainer {
                 display: flex; 
                 
                 .footer-social {
-                    width: 40px; 
-                    height: 40px; 
+                    width: 30px; 
+                    height: 30px; 
                     border-radius: 50%; 
                     display: flex; 
                     justify-content: center; 
                     align-items: center; 
-                    flex-direction: column; 
-                    margin-right: 20px; 
+                    // potential more social links
+                    // flex-direction: column; 
+                    // margin-right: 20px; 
         
                     a {
                         color: var(--alice-blue); 
                         display: flex; 
                         justify-content: center; 
                         align-items: center; 
-    
+
                         svg {
-                            width: 21px; 
-                            height: 21px; 
+                            width: 20px; 
+                            height: 20px; 
                         }
                     }
         
-                    // Potentially add more logos
+                    // potential more social links
                     &:nth-child(1) {
                         background-color: var(--rich-black); 
                     }
                 }
             }
-    
         }
     }
 }

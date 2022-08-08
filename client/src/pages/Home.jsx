@@ -1,4 +1,4 @@
-import { Navbar, Menu, Hero, Newsletter, Footer } from "../components"; 
+import { Navbar, Menu, Hero, Footer } from "../components/index"; 
 
 const Home = ({ menuOpen, setMenuOpen }) => {
     return (
@@ -6,7 +6,6 @@ const Home = ({ menuOpen, setMenuOpen }) => {
             <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <Hero />
-            <Newsletter />
             <Footer />
         </div>
     )
