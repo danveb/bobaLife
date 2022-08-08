@@ -1,6 +1,6 @@
 import { Navbar, Menu, Jumbotron, Footer } from "../index"; 
 import { aboutJumbotron } from "../../constants/jumbotron";
-import { aboutTop, aboutCard, aboutBottom } from "../../constants/about"; 
+import { aboutTop, aboutCard } from "../../constants/about"; 
 import "./About.scss"; 
 
 const About = ({ menuOpen, setMenuOpen }) => {
@@ -18,7 +18,6 @@ const About = ({ menuOpen, setMenuOpen }) => {
                     <div className="about-container">
                         {aboutTop.map((top) => (
                             <div key={top.id}className="about-main">
-                                <h1>#let's bobaLife</h1>
                                 <img src={top.img} alt={top.alt} />
                                 <p>{top.text}</p>
                             </div>
@@ -31,12 +30,6 @@ const About = ({ menuOpen, setMenuOpen }) => {
                             </div>
                         ))}
                         </div>
-                        {aboutBottom.map((bottom) => (
-                            <div key={bottom.id}className="about-main">
-                                <img src={bottom.img} alt={bottom.alt} />
-                                <p>{bottom.text}</p>
-                            </div>
-                        ))}
                     </div>
                 </div>
             </div>

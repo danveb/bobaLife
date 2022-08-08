@@ -1,24 +1,16 @@
-import boba2 from "../assets/about/boba2.png"; 
 import shop from "../assets/about/shop.png"; 
 import tea from "../assets/about/tea.png"; 
 import barista from "../assets/about/barista.png";  
 import milk from "../assets/about/milk.png";  
+import banner from "../assets/about/banner.png";  
+import pattern from "../assets/about/pattern.png";  
 
 export const aboutTop = [
     {
         id: 1, 
-        img: boba2, 
+        img: pattern, 
         alt: "boba", 
         text: `We are an independent boba milk tea shop in the city of Chicago. We pride ourselves in crafting a collection of boba that reflects each of the four seasons. Our signature boba milk tea is simply "${"The Milk Tea"}". We invite you to our shop to try some of our best boba teas.`
-    }, 
-]; 
-
-export const aboutBottom = [
-    {
-        id: 1, 
-        img: shop, 
-        alt: "shop", 
-        text: "Our baristas are here to craft the best boba using only the freshest ingredients. Just stop by our bar to get recommendations on from our latest collection. If you don't like your drink, or if you'd like to ask for modifications don't hesitate to ask. We are here to help, always."
     }, 
 ]; 
 
@@ -40,5 +32,17 @@ export const aboutCard = [
         img: barista, 
         alt: "barista", 
         text: "Our tapioca is sourced from Asia and hand-prepped in-house to guarantee freshness. Our baristas put a lot of care, thought and an immense amount of love into each of our drinks.", 
+    }, 
+    {
+        id: 4, 
+        img: banner, 
+        alt: "banner", 
+        text: `We are simply the "${"Tea People"}". Our baristas are here to craft the best boba using only the freshest ingredients. Just stop by our bar to get recommendations on from our latest collection. If you don't like your drink, or if you'd like to ask for modifications don't hesitate to ask. We are here to help, always.`, 
+    }, 
+    {
+        id: 5, 
+        img: shop, 
+        alt: "shop", 
+        text: `Book a private boba class with us! Learn the know-how, along with a fun hands-on experience for your team. We will learn how to brew our signature tea base, prep tapioca and recreate learn how to properly brew our signature tea, make tapioca from scratch and recreate "${"The Milk Tea"}".`, 
     }, 
 ]; 

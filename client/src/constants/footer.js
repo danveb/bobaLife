@@ -1,4 +1,4 @@
-import { FaGlobeAmericas, FaWhatsapp, FaEnvelopeOpen, FaRegCreditCard, FaGithub } from "react-icons/fa"; 
+import { FaGlobeAmericas, FaWhatsapp, FaEnvelopeOpen, FaRegCreditCard } from "react-icons/fa"; 
 import { BsHourglassSplit } from "react-icons/bs"; 
 
 export const footerContact = [
