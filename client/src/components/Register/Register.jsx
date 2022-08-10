@@ -93,40 +93,52 @@ const Register = ({ menuOpen, setMenuOpen }) => {
     return (
         <div>
             <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />            <div className="register">
-                <div className="register-wrapper">
-                    <h1>Register</h1>
-                    <p>Please enter your details</p>
-                    <form onSubmit={handleSubmit} >
-                        <label htmlFor="username" />
-                        <input
-                            id="username" 
-                            type="username"
+            <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />            
+            <div className="register">
+                <div className="register-top">
+                    <div className="register-title">
+                        <h1>Register</h1>
+                        <p>Create your free account</p>
+                    </div>
+                    <form className="register-form" onSubmit={handleSubmit}>
+                        <label
+                            htmlFor="username"
+                        >
+                            Username</label>
+                        <input 
+                            id="username"
                             name="username"
-                            placeholder="Enter a username"
-                            value={username} 
+                            value={username}
                             onChange={handleChange}
+                            type="username" 
+                            placeholder="Your username" 
                         />
-                        <label htmlFor="email" />
-                        <input
-                            id="email" 
-                            type="email"
+                        <label
+                            htmlFor="email"
+                        >
+                            Email</label>
+                        <input 
+                            id="email"
                             name="email"
-                            placeholder="Enter an email"
-                            value={email} 
+                            value={email}
                             onChange={handleChange}
+                            type="email" 
+                            placeholder="Your email" 
                         />
-                        <label htmlFor="password" />
+                        <label
+                            htmlFor="password"
+                        >
+                            Password</label>
                         <input 
                             id="password"
-                            type="password"
                             name="password"
-                            placeholder="Enter a password"
-                            value={password} 
+                            value={password}
                             onChange={handleChange}
+                            type="password" 
+                            placeholder="Your password" 
                         />
-                        <button type="submit">Register</button>
-                        <Link to="/login">Sign In Here</Link>
+                        <button>Register</button>
+                        <Link to="/login">Already have an account?</Link>
                     </form>
                 </div>
             </div>

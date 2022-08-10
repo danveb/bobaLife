@@ -84,31 +84,38 @@ const Login = ({ menuOpen, setMenuOpen }) => {
             <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <div className="login">
-                <div className="login-wrapper">
-                    <h1>Sign In</h1>
-                    <p>Please enter your credentials</p>
-                    <form onSubmit={handleSubmit} >
-                        <label htmlFor="email" />
-                        <input
-                            id="email" 
-                            type="email"
+                <div className="login-top">
+                    <div className="login-title">
+                        <h1>Sign In</h1>
+                        <p>Enter your account credentials</p>
+                    </div>
+                    <form className="login-form" onSubmit={handleSubmit}>
+                        <label
+                            htmlFor="email"
+                        >
+                            Email</label>
+                        <input 
+                            id="email"
                             name="email"
-                            placeholder="Enter your email"
-                            value={email} 
+                            value={email}
                             onChange={handleChange}
+                            type="email" 
+                            placeholder="Your email" 
                         />
-
-                        <label htmlFor="password" />
+                        <label
+                            htmlFor="password"
+                        >
+                            Password</label>
                         <input 
                             id="password"
-                            type="password"
                             name="password"
-                            placeholder="Enter your password"
-                            value={password} 
+                            value={password}
                             onChange={handleChange}
+                            type="password" 
+                            placeholder="Your password" 
                         />
-                        <button type="submit">Sign In</button>
-                        <Link to="/register">Register New Account</Link>
+                        <button>Sign In</button>
+                        <Link to="/register">Need a new account?</Link>
                     </form>
                 </div>
             </div>

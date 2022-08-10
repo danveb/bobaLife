@@ -1,6 +1,6 @@
-import shop from "../assets/hero/shop.png"
-import boba from "../assets/hero/boba.png"; 
-import matcha from "../assets/hero/matcha.png"; 
+import shop from "../assets/hero/shop.webp"
+import boba from "../assets/hero/boba.webp"; 
+import matcha from "../assets/hero/matcha.webp"; 
 
 export const heroCards = [
     {

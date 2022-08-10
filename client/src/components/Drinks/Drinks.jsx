@@ -1,6 +1,7 @@
 import { Navbar, Menu, Jumbotron, Footer } from "../index"; 
 import { drinksJumbotron } from "../../constants/jumbotron";
 import "./Drinks.scss"; 
+import { drinkItems } from "../../constants/drinks";
 
 const Drinks = ({ menuOpen, setMenuOpen }) => {
     // destructure id, head, text from heroJumbotron
@@ -15,9 +16,18 @@ const Drinks = ({ menuOpen, setMenuOpen }) => {
                 <Jumbotron id={id} head={head} text={text} />
                 <div className="drinks-wrapper">
                     <div className="drinks-container">
-                        <div className="drinks-main">
-                            <h1>#drinks @bobaLife</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptates assumenda nulla suscipit, magni repellat, minus aliquam mollitia odio nobis ex cupiditate, iste saepe a excepturi! Optio et minus excepturi.Lorem </p>
+                        <div className="drinks-top">
+                            {drinkItems.map((drink) => (
+                                <div key={drink.id}className="card">
+                                    <h4>{drink.title}</h4>
+                                    <p>{drink.description}</p>
+                                    <p>{drink.price}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="drinks-mid">
+                            <p>All of our drinks are served with tapioca</p>
+                            <p>Check back next season for our new collection</p>
                         </div>
                     </div>
                 </div>

@@ -1,9 +1,9 @@
-import shop from "../assets/about/shop.png"; 
-import tea from "../assets/about/tea.png"; 
-import barista from "../assets/about/barista.png";  
-import milk from "../assets/about/milk.png";  
-import banner from "../assets/about/banner.png";  
-import pattern from "../assets/about/pattern.png";  
+import shop from "../assets/about/shop.webp"; 
+import tea from "../assets/about/tea.webp"; 
+import barista from "../assets/about/barista.webp";  
+import milk from "../assets/about/milk.webp";  
+import banner from "../assets/about/banner.webp";  
+import pattern from "../assets/about/pattern.webp";  
 
 export const aboutTop = [
     {
