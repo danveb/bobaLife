@@ -1,7 +1,7 @@
-const jwt = require("jsonwebtoken"); 
-const bcrypt = require("bcryptjs"); 
-const asyncHandler = require("express-async-handler"); 
-const User = require("../models/userModel"); 
+import jwt from "jsonwebtoken"; 
+import bcrypt from "bcryptjs"; 
+import asyncHandler from "express-async-handler"; 
+import User from "../models/userModel.js"; 
 
 // Generate JWT (token)
 const generateToken = (id) => {
@@ -51,7 +51,7 @@ const registerUser = asyncHandler(async (req, res) => {
         })
     } else {
         res.status(400)
-        throw new Error("Invalid User data"); 
+        throw new Error("Sorry, an error occured. Try again or create a new account."); 
     };
 });
 
@@ -75,7 +75,7 @@ const signInUser = asyncHandler(async (req, res) => {
         });
     } else {
         res.status(400) 
-        throw new Error("Invalid credentials")
+        throw new Error("Invalid credentials. Please try again.")
     };
 });
 
@@ -131,7 +131,7 @@ const deleteUser = asyncHandler(async(req, res) => {
     res.status(200).json({ id: req.params.id }); 
 });
 
-module.exports = {
+export {
     registerUser, 
     signInUser, 
     getUser, 

@@ -28,7 +28,7 @@ const Login = ({ menuOpen, setMenuOpen }) => {
     // useEffect
     useEffect(() => {
         if(isError) {
-            toast.error("Invalid email/password. Please enter it again.", {
+            toast.error(message, {
                 position: "top-center", 
                 autoClose: 2500, 
                 pauseOnHover: true, 
@@ -67,9 +67,17 @@ const Login = ({ menuOpen, setMenuOpen }) => {
         };
         // error check with toast 
         if(email.length === 0) {
-            toast.error("Email is empty. Please enter it again."); 
+            toast.error("Email field is empty. Please enter it again.", {
+                position: "top-center", 
+                autoClose: 1500, 
+                pauseOnHover: true, 
+            }); 
         } else if(password.length === 0) {
-            toast.error("Password field is empty. Please enter it again."); 
+            toast.error("Password field is empty. Please enter it again.", {
+                position: "top-center", 
+                autoClose: 1500, 
+                pauseOnHover: true, 
+            }); 
         } else {
             dispatch(login(userData)); 
         }

@@ -29,7 +29,7 @@ const Register = ({ menuOpen, setMenuOpen }) => {
     // useEffect 
     useEffect(() => {
         if(isError) {
-            toast.error("Sorry, an error occured. Try again or create a new account.", {
+            toast.error(message, {
                 position: "top-center", 
                 autoClose: 2000, 
                 pauseOnHover: true, 
@@ -74,11 +74,23 @@ const Register = ({ menuOpen, setMenuOpen }) => {
             }
             // error checking with toast... 
             if(username.length === 0) {
-                toast.error("Username is empty. Please create it again."); 
+                toast.error("Username is empty. Please create it again.", {
+                position: "top-center", 
+                autoClose: 1500, 
+                pauseOnHover: true, 
+            }); 
             } else if(email.length === 0) {
-                toast.error("Email is empty. Please create it again."); 
+                toast.error("Email is empty. Please create it again.", {
+                position: "top-center", 
+                autoClose: 1500, 
+                pauseOnHover: true, 
+            }); 
             } else if(password.length === 0) {
-                toast.error("Password is empty. Please create it again."); 
+                toast.error("Password is empty. Please create it again.", {
+                position: "top-center", 
+                autoClose: 1500, 
+                pauseOnHover: true, 
+            }); 
             } else {
                 // dispatch register with userData
                 dispatch(register(userData)); 

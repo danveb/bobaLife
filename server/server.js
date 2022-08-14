@@ -1,24 +1,29 @@
-const express = require("express"); 
-const colors = require("colors"); 
-const dotenv = require("dotenv").config(); 
-const { errorHandler } = require("./middleware/errorMiddleware"); 
-const connectDB = require("./config/db"); 
-const port = process.env.PORT || 4000; 
-const cors = require("cors"); 
+import express from "express"; 
+import colors from "colors"; 
+import dotenv from "dotenv/config"; 
+import connectDB from "./config/db.js"; 
+import userRoute from "./routes/userRoute.js"; 
+import { notFound, errorHandler } from "./middleware/errorMiddleware.js"; 
+import cors from "cors"; 
+const port = process.env.PORT || 8801; 
 
-connectDB(); 
+connectDB() 
 
 const app = express(); 
 
 // Middleware 
 app.use(express.json()); 
-app.use(express.urlencoded({ extended: false })); 
+app.use(express.urlencoded({ extended: false }));
 
-app.use(errorHandler); 
+// Cors
 app.use(cors()); 
 
 // Routes 
-app.use("/api/users", require("./routes/userRoute")); 
+app.use("/api/users", userRoute); 
+
+// Error Middleware
+app.use(notFound);  
+app.use(errorHandler);
 
 // Test 123 
 app.get('/', (req, res) => { res.send('Hello from Express!') })
