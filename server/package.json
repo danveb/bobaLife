@@ -5,7 +5,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "data:import": "node seeder",
+    "data:destroy": "node seeder -d"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,7 @@
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.5.2",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "stripe": "^10.7.0"
   }
 }
