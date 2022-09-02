@@ -3,9 +3,13 @@ import colors from "colors";
 import dotenv from "dotenv/config"; 
 import connectDB from "./config/db.js"; 
 import userRoute from "./routes/userRoute.js"; 
+import productRoute from "./routes/productRoute.js"; 
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js"; 
 import cors from "cors"; 
 const port = process.env.PORT || 8801; 
+
+// Import createCheckoutSession
+import createCheckoutSession from "./api/checkout.js"; 
 
 connectDB() 
 
@@ -20,6 +24,10 @@ app.use(cors());
 
 // Routes 
 app.use("/api/users", userRoute); 
+app.use("/api/products", productRoute); 
+
+// Stripe Route 
+app.post("/create-checkout-session", createCheckoutSession); 
 
 // Error Middleware
 app.use(notFound);  
