@@ -4,7 +4,93 @@ import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify"; 
 import { register, reset } from "../../redux/auth/authSlice"; 
 import { Navbar, Menu, Spinner } from "../index";
-import "./Register.scss"; 
+import styled from "styled-components";
+import { device } from "../../styled";
+
+const RegisterContainer = styled.div`
+    height: calc(100vh - 79px); 
+    width: 100%; 
+    padding: 40px 24px; 
+    display: flex; 
+    flex-direction: column; 
+    color: #000; 
+`
+const RegisterWrapper = styled.div`
+    max-width: 1400px; 
+    width: 50%; 
+    margin: 0 auto; 
+
+    @media ${device.tablet} {
+        width: 80%;
+    }
+    @media ${device.mobile} {
+        width: 100%;
+    }
+`
+const RegisterMain = styled.div`
+    font-family: "Prata", sans-serif; 
+`
+const RegisterTitle = styled.h1`
+    font-size: 56px; 
+    margin-bottom: 10px; 
+
+    @media ${device.tablet} {
+        font-size: 40px; 
+    }
+`
+const RegisterText = styled.p`
+    font-family: "Poppins", sans-serif; 
+    font-size: 14px; 
+    margin-bottom: 20px; 
+`
+const Form = styled.form`
+    display: flex; 
+    flex-direction: column; 
+    width: 100%;  
+    padding: 2rem; 
+    border-radius: 10px; 
+    background-color: lightgoldenrodyellow;
+
+    & a {
+        color: #000; 
+        text-decoration: none; 
+        text-align: right;
+        font-size: 13px; 
+        cursor: pointer; 
+    }
+`
+const Label = styled.label`
+    line-height: 1em; 
+    letter-spacing: .1em; 
+    font-size: 11px; 
+    text-transform: uppercase; 
+    color: #000; 
+    margin-bottom: 10px; 
+`
+const Input = styled.input`
+    line-height: 1em; 
+    outline: 0; 
+    border: 1px solid #000; 
+    padding: 0.875rem 0.75rem; 
+    width: 100%; 
+    font-size: 12px; 
+    color: #000; 
+    margin-bottom: 15px; 
+`
+const RegisterBtn = styled.button`
+    font-family: "Quicksand", sans-serif; 
+    height: 50px; 
+    width: 100%; 
+    background-color: #000; 
+    border: 2px solid #000; 
+    line-height: 1em; 
+    letter-spacing: .13em; 
+    font-size: 11px; 
+    text-transform: uppercase; 
+    color: #fff; 
+    margin-bottom: 15px; 
+    cursor: pointer; 
+`
 
 const Register = ({ menuOpen, setMenuOpen }) => {
     // useState 
@@ -100,24 +186,24 @@ const Register = ({ menuOpen, setMenuOpen }) => {
 
     if(isLoading) {
         return <Spinner />
-    }
+    };
 
     return (
-        <div>
+        <>
             <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />            
-            <div className="register">
-                <div className="register-top">
-                    <div className="register-title">
-                        <h1>Register</h1>
-                        <p>Create your free account</p>
-                    </div>
-                    <form className="register-form" onSubmit={handleSubmit}>
-                        <label
+            <RegisterContainer className="register">
+                <RegisterWrapper>
+                    <RegisterMain>
+                        <RegisterTitle>Register</RegisterTitle>
+                        <RegisterText>Create your free account</RegisterText>
+                    </RegisterMain>
+                    <Form className="register-form" onSubmit={handleSubmit}>
+                        <Label
                             htmlFor="username"
                         >
-                            Username</label>
-                        <input 
+                            Username</Label>
+                        <Input 
                             id="username"
                             name="username"
                             value={username}
@@ -125,11 +211,11 @@ const Register = ({ menuOpen, setMenuOpen }) => {
                             type="username" 
                             placeholder="Your username" 
                         />
-                        <label
+                        <Label
                             htmlFor="email"
                         >
-                            Email</label>
-                        <input 
+                            Email</Label>
+                        <Input 
                             id="email"
                             name="email"
                             value={email}
@@ -137,11 +223,11 @@ const Register = ({ menuOpen, setMenuOpen }) => {
                             type="email" 
                             placeholder="Your email" 
                         />
-                        <label
+                        <Label
                             htmlFor="password"
                         >
-                            Password</label>
-                        <input 
+                            Password</Label>
+                        <Input 
                             id="password"
                             name="password"
                             value={password}
@@ -149,12 +235,12 @@ const Register = ({ menuOpen, setMenuOpen }) => {
                             type="password" 
                             placeholder="Your password" 
                         />
-                        <button>Register</button>
+                        <RegisterBtn>Register</RegisterBtn>
                         <Link to="/login">Already have an account?</Link>
-                    </form>
-                </div>
-            </div>
-        </div>
+                    </Form>
+                </RegisterWrapper>
+            </RegisterContainer>
+        </>
     )
     
 }

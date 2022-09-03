@@ -30,9 +30,11 @@
             }
 
             .logo {
+                font-family: "Prata", sans-serif; 
                 text-decoration: none; 
                 color: var(--raisin-black); 
-                font-size: 24px; 
+                font-size: 22px; 
+                font-weight: 500; 
             }
         }
     
@@ -84,8 +86,8 @@
                 display: flex; 
                 justify-content: center; 
                 align-items: center; 
-                height: 20px; 
-                width: 20px; 
+                height: 25px; 
+                width: 25px; 
                 color: var(--raisin-black); 
                 cursor: pointer; 
             }

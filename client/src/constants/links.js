@@ -14,4 +14,9 @@ export const links = [
         text: "Drinks",
         path: "/drinks",
     }, 
+    {
+        id: 4, 
+        text: "Shop",
+        path: "/shop",
+    }, 
 ]; 

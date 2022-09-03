@@ -14,7 +14,7 @@ const ShopContainer = styled.div`
     padding: 0 24px 0 24px; 
 `
 const Wrapper = styled.div`
-    max-width: 1500px; 
+    max-width: 1400px; 
     display: flex; 
     justify-content: space-between;
     margin-left: auto;
@@ -27,11 +27,10 @@ const Wrapper = styled.div`
 `
 const ShopRow = styled.div`
     display: grid; 
-    grid-template-columns: repeat(6, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
     gap: 10px; 
     width: 100%; 
     margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr); 
 
     @media ${device.tablet} {
         grid-template-columns: repeat(2, 1fr); 

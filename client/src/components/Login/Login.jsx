@@ -3,8 +3,98 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux"; 
 import { toast } from "react-toastify"; 
 import { login, reset } from "../../redux/auth/authSlice"; 
-import { Navbar, Menu, Spinner } from "..";
-import "./Login.scss"; 
+import { Navbar, Menu, Spinner } from "../index";
+import styled from "styled-components";
+import { device } from "../../styled";
+
+const LoginContainer = styled.div`
+    height: calc(100vh - 79px); 
+    width: 100%; 
+    padding: 40px 24px; 
+    display: flex; 
+    flex-direction: column; 
+    color: #000; 
+`
+const LoginWrapper = styled.div`
+    max-width: 1400px; 
+    width: 50%; 
+    margin: 0 auto; 
+
+    @media ${device.tablet} {
+        width: 80%;
+    }
+    @media ${device.mobile} {
+        width: 100%;
+    }
+`
+const LoginMain = styled.div`
+    font-family: "Prata", sans-serif; 
+`
+const LoginTitle = styled.h1`
+    font-size: 56px; 
+    margin-bottom: 10px; 
+
+    @media ${device.tablet} {
+        font-size: 40px; 
+    }
+`
+const LoginText = styled.p`
+    font-family: "Poppins", sans-serif; 
+    font-size: 14px; 
+    margin-bottom: 20px; 
+
+    & span {
+        font-style: italic; 
+    }
+`
+const Form = styled.form`
+    display: flex; 
+    flex-direction: column; 
+    width: 100%;  
+    padding: 2rem; 
+    border-radius: 10px; 
+    background-color: lightgoldenrodyellow;
+
+    & a {
+        color: #000; 
+        text-decoration: none; 
+        text-align: right;
+        font-size: 13px; 
+        cursor: pointer; 
+    }
+`
+const Label = styled.label`
+    line-height: 1em; 
+    letter-spacing: .1em; 
+    font-size: 11px; 
+    text-transform: uppercase; 
+    color: #000; 
+    margin-bottom: 10px; 
+`
+const Input = styled.input`
+    line-height: 1em; 
+    outline: 0; 
+    border: 1px solid #000; 
+    padding: 0.875rem 0.75rem; 
+    width: 100%; 
+    font-size: 12px; 
+    color: #000; 
+    margin-bottom: 15px; 
+`
+const LoginBtn = styled.button`
+    font-family: "Quicksand", sans-serif; 
+    height: 50px; 
+    width: 100%; 
+    background-color: #000; 
+    border: 2px solid #000; 
+    line-height: 1em; 
+    letter-spacing: .13em; 
+    font-size: 11px; 
+    text-transform: uppercase; 
+    color: #fff; 
+    margin-bottom: 15px; 
+    cursor: pointer; 
+`
 
 const Login = ({ menuOpen, setMenuOpen }) => {
     // useState 
@@ -85,24 +175,24 @@ const Login = ({ menuOpen, setMenuOpen }) => {
 
     if(isLoading) {
         return <Spinner />
-    }
+    };
 
     return (
-        <div>
+        <>
             <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <div className="login">
-                <div className="login-top">
-                    <div className="login-title">
-                        <h1>Sign In</h1>
-                        <p>Enter your account credentials</p>
-                    </div>
-                    <form className="login-form" onSubmit={handleSubmit}>
-                        <label
+            <LoginContainer>
+                <LoginWrapper>
+                    <LoginMain>
+                        <LoginTitle>Sign In</LoginTitle>
+                        <LoginText>Enter your account <span>credentials</span></LoginText>
+                    </LoginMain>
+                    <Form onSubmit={handleSubmit}>
+                        <Label
                             htmlFor="email"
                         >
-                            Email</label>
-                        <input 
+                            Email</Label>
+                        <Input 
                             id="email"
                             name="email"
                             value={email}
@@ -110,11 +200,11 @@ const Login = ({ menuOpen, setMenuOpen }) => {
                             type="email" 
                             placeholder="Your email" 
                         />
-                        <label
+                        <Label
                             htmlFor="password"
                         >
-                            Password</label>
-                        <input 
+                            Password</Label>
+                        <Input 
                             id="password"
                             name="password"
                             value={password}
@@ -122,12 +212,12 @@ const Login = ({ menuOpen, setMenuOpen }) => {
                             type="password" 
                             placeholder="Your password" 
                         />
-                        <button>Sign In</button>
+                        <LoginBtn>Sign In</LoginBtn>
                         <Link to="/register">Need a new account?</Link>
-                    </form>
-                </div>
-            </div>
-        </div>
+                    </Form>
+                </LoginWrapper>
+            </LoginContainer>
+        </>
     )
     
 }

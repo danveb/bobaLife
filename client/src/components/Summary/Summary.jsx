@@ -10,7 +10,7 @@ const SummaryContainer = styled.div`
     flex-direction: column; 
 `
 const SummaryMain = styled.div`
-    max-width: 1600px; 
+    max-width: 1400px; 
     width: 50%; 
     margin: 0 auto; 
     display: flex; 
