@@ -4,8 +4,7 @@ import "./Drinks.scss";
 import { drinkItems } from "../../constants/drinks";
 
 const Drinks = ({ menuOpen, setMenuOpen }) => {
-    // destructure id, head, text from heroJumbotron
-    // pass down as props to Jumbotron component
+    // destructure id, head, text from Jumbotron
     const { id, head, text } = drinksJumbotron[0]; 
     
     return (
