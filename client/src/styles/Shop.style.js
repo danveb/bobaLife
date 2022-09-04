@@ -35,5 +35,6 @@ export const Icon = styled.div`
     padding: 15px; 
     border-radius: 50%; 
     box-shadow: 0 2px 3px darkgray;
+    cursor: pointer; 
 `
 export const EmptyDiv = styled.div``
