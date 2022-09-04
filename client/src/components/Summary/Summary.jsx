@@ -1,66 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux"; 
 import { StripeCheckout } from "../index"; 
-import styled from "styled-components";
-import { device } from "../../styled"; 
-
-const SummaryContainer = styled.div`
-    padding: 20px 10px; 
-    display: flex; 
-    flex-direction: column; 
-`
-const SummaryMain = styled.div`
-    max-width: 1400px; 
-    width: 50%; 
-    margin: 0 auto; 
-    display: flex; 
-    justify-content: center; 
-    flex-direction: column; 
-    padding: 2rem; 
-    border-radius: 10px; 
-    background-color: lightgoldenrodyellow; 
-
-    @media ${device.tablet} {
-        width: 80%; 
-    }
-
-    @media ${device.mobile} {
-        width: 100%; 
-    }
-`
-const SummaryTitle = styled.h2`
-    font-family: "Prata", sans-serif; 
-    font-size: 56px; 
-
-    @media ${device.mobile} {
-        font-size: 36px; 
-    }
-`
-const SummaryItem = styled.div`
-    display: flex; 
-    justify-content: space-between; 
-    margin: 20px 0px; 
-`
-const SummaryText = styled.p`
-    font-family: "Poppins", sans-serif; 
-    font-size: 15px; 
-    font-weight: ${props=>props.type === "total" && "400"}; 
-    font-size: ${props=>props.type === "total" && "20px"};
-    color: ${props=>props.type === "total" && "crimson"} 
-`
-const SummaryBackBtn = styled.button`
-    font-family: "Quicksand", sans-serif; 
-    height: 50px; 
-    width: 100%; 
-    background-color: red; 
-    border: 2px solid red; 
-    line-height: 1em; 
-    letter-spacing: .13em; 
-    font-size: 11px; 
-    text-transform: uppercase; 
-    color: #000; 
-    cursor: pointer; 
-`
+import { SummaryContainer, Main, H2, Item, P, BackBtn } from "../../styles/Summary.style";
 
 const Summary = () => {
     // useNavigate
@@ -85,28 +26,28 @@ const Summary = () => {
  
     return (
         <SummaryContainer>
-            <SummaryMain>
-                <SummaryTitle>Order</SummaryTitle>
-                <SummaryItem>
-                    <SummaryText>{`Subtotal (${cartQty()})`}</SummaryText>
-                    <SummaryText>$ {cartTotal()}</SummaryText>
-                </SummaryItem>
-                <SummaryItem>
-                    <SummaryText>Est. Shipping</SummaryText>
-                    <SummaryText>$0.00</SummaryText>
-                </SummaryItem>
-                <SummaryItem>
-                    <SummaryText>Tax</SummaryText>
-                    <SummaryText>$0.00</SummaryText>
-                </SummaryItem>
-                <SummaryItem>
-                    <SummaryText type="total">Total</SummaryText>
-                    <SummaryText type="total">$ {cartTotal()}</SummaryText>
-                </SummaryItem>
+            <Main>
+                <H2>Order</H2>
+                <Item>
+                    <P>{`Subtotal (${cartQty()})`}</P>
+                    <P>$ {cartTotal()}</P>
+                </Item>
+                <Item>
+                    <P>Est. Shipping</P>
+                    <P>$0.00</P>
+                </Item>
+                <Item>
+                    <P>Tax</P>
+                    <P>$0.00</P>
+                </Item>
+                <Item>
+                    <P type="total">Total</P>
+                    <P type="total">$ {cartTotal()}</P>
+                </Item>
                 {/* Stripe Checkout Component */}
                 <StripeCheckout />
-                <SummaryBackBtn onClick={()=> navigate("/cart")}>Back to Cart</SummaryBackBtn>
-            </SummaryMain>
+                <BackBtn onClick={()=> navigate("/cart")}>Back to Cart</BackBtn>
+            </Main>
         </SummaryContainer>
     )
 }

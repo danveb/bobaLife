@@ -1,13 +1,11 @@
-import { Navbar, Menu, Hero, Footer } from "../components/index"; 
+import { Hero, Footer } from "../components/index"; 
 
-const Home = ({ menuOpen, setMenuOpen }) => {
+const Home = () => {
     return (
-        <div>
-            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <>
             <Hero />
             <Footer />
-        </div>
+        </>
     )
 }
 

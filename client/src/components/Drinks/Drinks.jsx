@@ -1,38 +1,34 @@
-import { Navbar, Menu, Jumbotron, Footer } from "../index"; 
+import { Jumbotron, Footer } from "../index"; 
 import { drinksJumbotron } from "../../constants/jumbotron";
-import "./Drinks.scss"; 
 import { drinkItems } from "../../constants/drinks";
+import { DrinksContainer, Wrapper, Top, Card, H4, P, Mid, MidP } from "../../styles/Drinks.style";
 
-const Drinks = ({ menuOpen, setMenuOpen }) => {
+const Drinks = () => {
     // destructure id, head, text from Jumbotron
     const { id, head, text } = drinksJumbotron[0]; 
     
     return (
-        <div>
-            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <div className="drinks">
+        <>
+            <DrinksContainer>
                 <Jumbotron id={id} head={head} text={text} />
-                <div className="drinks-wrapper">
-                    <div className="drinks-container">
-                        <div className="drinks-top">
-                            {drinkItems.map((drink) => (
-                                <div key={drink.id}className="card">
-                                    <h4>{drink.title}</h4>
-                                    <p>{drink.description}</p>
-                                    <p>{drink.price}</p>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="drinks-mid">
-                            <p>All of our drinks are served with tapioca</p>
-                            <p>Check back next season for our new collection</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <Wrapper>
+                    <Top>
+                        {drinkItems.map((drink) => (
+                            <Card key={drink.id}>
+                                <H4>{drink.title}</H4>
+                                <P>{drink.description}</P>
+                                <P>{drink.price}</P>
+                            </Card>
+                        ))}
+                    </Top>
+                    <Mid>
+                        <MidP>All of our drink are served with taDrinksMidPioca</MidP>
+                        <MidP>Check back next season for our new collection</MidP>
+                    </Mid>
+                </Wrapper>
+            </DrinksContainer>
             <Footer />
-        </div>
+        </>
     )
 }
 

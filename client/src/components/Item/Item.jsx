@@ -1,50 +1,7 @@
 import { useDispatch } from "react-redux"; 
 import { addToCart } from "../../redux/cart/cartSlice";
-import styled from "styled-components";
 import { toast } from "react-toastify";
-
-const ItemContainer = styled.div`
-    max-width: 420px; 
-    margin: 0 auto; 
-    padding: 10px; 
-`
-const Card = styled.div`
-    margin-bottom: 20px; 
-`
-const CardImg = styled.img`
-    min-height: 300px; 
-    width: 100%; 
-    object-fit: cover; 
-`
-const CardBody = styled.div`
-    font-family: "Poppins", sans-serif; 
-`
-const CardTitle = styled.h3`
-    font-size: 16px; 
-    margin: 10px 0; 
-`
-const CardDescription = styled.p`
-    font-size: 14px; 
-    font-style: italic; 
-    margin: 10px 0;
-`
-const CardPrice = styled.p`
-    font-size: 15px; 
-    margin: 10px 0;
-`
-const CardBtn = styled.button`
-    font-family: "Quicksand", sans-serif; 
-    height: 50px; 
-    width: 100%; 
-    background-color: #000; 
-    border: 2px solid #000; 
-    line-height: 1em; 
-    letter-spacing: .13em; 
-    font-size: 11px; 
-    text-transform: uppercase; 
-    color: #fff; 
-    cursor: pointer; 
-`
+import { ItemContainer, Card, CardImg, CardBody, CardTitle, CardDescription, CardPrice, CardBtn } from "../../styles/Item.style";
 
 const Item = ({ id, title, description, image, price }) => {
     // useDispatch
@@ -55,7 +12,7 @@ const Item = ({ id, title, description, image, price }) => {
         dispatch(addToCart({
             id, title, description, image, price
         })); 
-        toast(`${title} added to Cart`, {
+        toast(`${title} added to Basket`, {
             position: "top-center", 
             autoClose: 2500, 
             pauseOnHover: false, 
@@ -71,7 +28,7 @@ const Item = ({ id, title, description, image, price }) => {
                     <CardDescription>{description}</CardDescription>
                     <CardPrice>$ {price}</CardPrice>
                 </CardBody>
-                <CardBtn onClick={handleClick}>Add To Cart</CardBtn>
+                <CardBtn onClick={handleClick}>Add To Basket</CardBtn>
             </Card>
         </ItemContainer>
     )

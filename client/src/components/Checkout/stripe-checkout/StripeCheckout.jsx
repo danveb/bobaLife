@@ -2,44 +2,7 @@ import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { fetchFromAPI } from "../../../helper/checkoutHelper";
 import { useStripe } from "@stripe/react-stripe-js"; 
-import styled from "styled-components";
-
-const Form = styled.form`
-    display: flex; 
-    flex-direction: column; 
-`
-const Label = styled.label`
-    line-height: 1em; 
-    letter-spacing: .1em;
-    font-size: 12px; 
-    text-transform: uppercase; 
-    color: #000; 
-    margin-bottom: 10px; 
-`
-const Input = styled.input`
-    line-height: 1em; 
-    outline: 0; 
-    border: 1px solid #000; 
-    padding: 0.875rem 0.75rem; 
-    width: 100%; 
-    font-size: 12px; 
-    color: #000; 
-    margin-bottom: 15px; 
-`
-const CheckoutBtn = styled.button`
-    font-family: "Quicksand", sans-serif; 
-    height: 50px; 
-    width: 100%; 
-    background-color: #000; 
-    border: 2px solid #000; 
-    line-height: 1em; 
-    letter-spacing: .13em; 
-    font-size: 11px; 
-    text-transform: uppercase; 
-    color: #fff; 
-    margin-bottom: 15px; 
-    cursor: pointer; 
-`
+import { Form, Label, Input, CheckoutBtn } from "../../../styles/StripeCheckout.style"; 
 
 const StripeCheckout = () => {
     // useState

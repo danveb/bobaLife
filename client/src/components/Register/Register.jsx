@@ -3,96 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux"; 
 import { toast } from "react-toastify"; 
 import { register, reset } from "../../redux/auth/authSlice"; 
-import { Navbar, Menu, Spinner } from "../index";
-import styled from "styled-components";
-import { device } from "../../styled";
+import { Spinner } from "../index";
+import { RegisterContainer, Wrapper, Main, H1, P, Form, Label, Input, Btn } from "../../styles/Register.style";
 
-const RegisterContainer = styled.div`
-    height: calc(100vh - 79px); 
-    width: 100%; 
-    padding: 40px 24px; 
-    display: flex; 
-    flex-direction: column; 
-    color: #000; 
-`
-const RegisterWrapper = styled.div`
-    max-width: 1400px; 
-    width: 50%; 
-    margin: 0 auto; 
-
-    @media ${device.tablet} {
-        width: 80%;
-    }
-    @media ${device.mobile} {
-        width: 100%;
-    }
-`
-const RegisterMain = styled.div`
-    font-family: "Prata", sans-serif; 
-`
-const RegisterTitle = styled.h1`
-    font-size: 56px; 
-    margin-bottom: 10px; 
-
-    @media ${device.tablet} {
-        font-size: 40px; 
-    }
-`
-const RegisterText = styled.p`
-    font-family: "Poppins", sans-serif; 
-    font-size: 14px; 
-    margin-bottom: 20px; 
-`
-const Form = styled.form`
-    display: flex; 
-    flex-direction: column; 
-    width: 100%;  
-    padding: 2rem; 
-    border-radius: 10px; 
-    background-color: lightgoldenrodyellow;
-
-    & a {
-        color: #000; 
-        text-decoration: none; 
-        text-align: right;
-        font-size: 13px; 
-        cursor: pointer; 
-    }
-`
-const Label = styled.label`
-    line-height: 1em; 
-    letter-spacing: .1em; 
-    font-size: 11px; 
-    text-transform: uppercase; 
-    color: #000; 
-    margin-bottom: 10px; 
-`
-const Input = styled.input`
-    line-height: 1em; 
-    outline: 0; 
-    border: 1px solid #000; 
-    padding: 0.875rem 0.75rem; 
-    width: 100%; 
-    font-size: 12px; 
-    color: #000; 
-    margin-bottom: 15px; 
-`
-const RegisterBtn = styled.button`
-    font-family: "Quicksand", sans-serif; 
-    height: 50px; 
-    width: 100%; 
-    background-color: #000; 
-    border: 2px solid #000; 
-    line-height: 1em; 
-    letter-spacing: .13em; 
-    font-size: 11px; 
-    text-transform: uppercase; 
-    color: #fff; 
-    margin-bottom: 15px; 
-    cursor: pointer; 
-`
-
-const Register = ({ menuOpen, setMenuOpen }) => {
+const Register = () => {
     // useState 
     const [formData, setFormData] = useState({
         username: "", 
@@ -189,58 +103,54 @@ const Register = ({ menuOpen, setMenuOpen }) => {
     };
 
     return (
-        <>
-            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />            
-            <RegisterContainer className="register">
-                <RegisterWrapper>
-                    <RegisterMain>
-                        <RegisterTitle>Register</RegisterTitle>
-                        <RegisterText>Create your free account</RegisterText>
-                    </RegisterMain>
-                    <Form className="register-form" onSubmit={handleSubmit}>
-                        <Label
-                            htmlFor="username"
-                        >
-                            Username</Label>
-                        <Input 
-                            id="username"
-                            name="username"
-                            value={username}
-                            onChange={handleChange}
-                            type="username" 
-                            placeholder="Your username" 
-                        />
-                        <Label
-                            htmlFor="email"
-                        >
-                            Email</Label>
-                        <Input 
-                            id="email"
-                            name="email"
-                            value={email}
-                            onChange={handleChange}
-                            type="email" 
-                            placeholder="Your email" 
-                        />
-                        <Label
-                            htmlFor="password"
-                        >
-                            Password</Label>
-                        <Input 
-                            id="password"
-                            name="password"
-                            value={password}
-                            onChange={handleChange}
-                            type="password" 
-                            placeholder="Your password" 
-                        />
-                        <RegisterBtn>Register</RegisterBtn>
-                        <Link to="/login">Already have an account?</Link>
-                    </Form>
-                </RegisterWrapper>
-            </RegisterContainer>
-        </>
+        <RegisterContainer className="register">
+            <Wrapper>
+                <Main>
+                    <H1>Register</H1>
+                    <P>Create your free account</P>
+                </Main>
+                <Form className="register-form" onSubmit={handleSubmit}>
+                    <Label
+                        htmlFor="username"
+                    >
+                        Username</Label>
+                    <Input 
+                        id="username"
+                        name="username"
+                        value={username}
+                        onChange={handleChange}
+                        type="username" 
+                        placeholder="Your username" 
+                    />
+                    <Label
+                        htmlFor="email"
+                    >
+                        Email</Label>
+                    <Input 
+                        id="email"
+                        name="email"
+                        value={email}
+                        onChange={handleChange}
+                        type="email" 
+                        placeholder="Your email" 
+                    />
+                    <Label
+                        htmlFor="password"
+                    >
+                        Password</Label>
+                    <Input 
+                        id="password"
+                        name="password"
+                        value={password}
+                        onChange={handleChange}
+                        type="password" 
+                        placeholder="Your password" 
+                    />
+                    <Btn>Register</Btn>
+                    <Link to="/login">Already have an account?</Link>
+                </Form>
+            </Wrapper>
+        </RegisterContainer>
     )
     
 }

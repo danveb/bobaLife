@@ -3,19 +3,19 @@
 const products = [
     {
         title: "Globo Espresso", 
-        description: "Robust Italian espresso blend from high-quality organic coffee beans", 
+        description: "Robust Italian espresso blend", 
         image: "https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/c_thumb,h_576,w_576/v1526404876/gkhxnpntcaonvebez1ys.jpg", 
         price: 28, 
     }, 
     {
         title: "Roaster's Choice Box", 
-        description: "Rotating collection of three single origins selected by our roasters", 
+        description: "Rotating collection of three single origins", 
         image: "https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/c_thumb,h_576,w_576/v1656526781/mikslgpdx1wadlkcb4xi.jpg", 
         price: 65, 
     }, 
     {
         title: "Nob Hill Boba Blend", 
-        description: "All-in-one kit to brew the perfect espresso milk tea", 
+        description: "All-in-one espresso milk tea kit", 
         image: "https://blue-bottle-cms.global.ssl.fastly.net/hbhhv9rz9/image/upload/c_thumb,h_576,w_576/v1526404848/r01wlbcqpgdspyszxg0n.jpg", 
         price: 35, 
     }, 
@@ -33,13 +33,13 @@ const products = [
     }, 
     {
         title: "Boba Milk Tea Sticker", 
-        description: "Boba Vibes! Represent your love for boba milk tea", 
+        description: "Boba Vibes! Love your boba", 
         image: "https://cdn.shopify.com/s/files/1/0022/9838/0353/products/boba-milk-tea-sticker_1024x.jpg?v=1624004774", 
         price: 3, 
     }, 
     {
         title: "Boba Is Life Sticker", 
-        description: "A bubble tea a day keeps the doctor away!", 
+        description: "A boba a day keeps the doctor away!", 
         image: "https://ih1.redbubble.net/image.1010597628.6058/st,small,507x507-pad,600x600,f8f8f8.jpg", 
         price: 3, 
     }, 

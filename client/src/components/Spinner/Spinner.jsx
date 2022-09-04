@@ -1,10 +1,11 @@
-import "./Spinner.scss"; 
+import { SpinnerContainer, Loading, Msg } from "../../styles/Spinner.style"
 
 const Spinner = () => {
     return (
-        <div className="spinner-container">
-            <div className="spinner-loading"></div>
-        </div>
+        <SpinnerContainer>
+            <Loading></Loading>
+            <Msg>loading... please wait</Msg>
+        </SpinnerContainer>
     )
 }
 
