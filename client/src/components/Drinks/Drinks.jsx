@@ -22,7 +22,7 @@ const Drinks = () => {
                         ))}
                     </Top>
                     <Mid>
-                        <MidP>All of our drink are served with taDrinksMidPioca</MidP>
+                        <MidP>All of our drink are served with tapioca</MidP>
                         <MidP>Check back next season for our new collection</MidP>
                     </Mid>
                 </Wrapper>

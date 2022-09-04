@@ -10,11 +10,7 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto; 
-    padding: 20px 0; 
-
-    @media ${device.mobile} {
-        padding: 10px;    
-    }
+    padding: 30px 0; 
 `
 export const Row = styled.div`
     display: grid; 

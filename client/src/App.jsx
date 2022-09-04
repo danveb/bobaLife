@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
 import Home from "./pages/Home"; 
 import { Navbar, Menu, About, Drinks, Login, Register, Shop, Cart, Checkout, Success, Cancelled } from "./components/index"; 
@@ -10,6 +10,15 @@ import "@stripe/stripe-js";
 
 const App = () => {
     const [menuOpen, setMenuOpen] = useState(false); 
+
+    // useEffect for scrolling allowed/not-allowed when using nav-menu
+    useEffect(() => {
+        if(menuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "unset"; 
+        }
+    }, [menuOpen]); 
     
     return (
         <>
