@@ -15,10 +15,10 @@ const register = async (userData) => {
 
     // use process.env (deployment)
     const response = await axios.post(REGISTER_URL, userData); 
-    if(response.data) {
-        // save user (token) into localStorage as string
-        localStorage.setItem("user", JSON.stringify(response.data)); 
-    }; 
+    // if(response.data) {
+    //     // save user (token) into localStorage as string
+    //     localStorage.setItem("user", JSON.stringify(response.data)); 
+    // }; 
     return response.data; 
 };
 
@@ -29,9 +29,9 @@ const login = async (userData) => {
     // use process.env (deployment)
     const response = await axios.post(LOGIN_URL, userData);
   
-    if (response.data) {
-      localStorage.setItem('user', JSON.stringify(response.data));
-    }; 
+    // if (response.data) {
+    //   localStorage.setItem('user', JSON.stringify(response.data));
+    // }; 
   
     return response.data;
 };

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-caXVBt gJpVKA"
+  >
+    <div
+      class="sc-hjriPb dWFijc"
+    >
+      <div
+        class="sc-gUAEMC eoOTrv"
+      >
+        <h1
+          class="sc-fWjsSh kVywhz"
+        >
+          Sign In
+        </h1>
+        <p
+          class="sc-fHsOPI kieKWP"
+        >
+          Enter your account 
+          <span>
+            credentials
+          </span>
+        </p>
+      </div>
+      <form
+        class="sc-gzzPqb gPOFHw"
+      >
+        <label
+          class="sc-gkJlnC juEHOj"
+          for="email"
+        >
+          Email
+        </label>
+        <input
+          class="sc-fmrZth gfnrlj"
+          id="email"
+          name="email"
+          placeholder="Your email"
+          type="email"
+          value=""
+        />
+        <label
+          class="sc-gkJlnC juEHOj"
+          for="password"
+        >
+          Password
+        </label>
+        <input
+          class="sc-fmrZth gfnrlj"
+          id="password"
+          name="password"
+          placeholder="Your password"
+          type="password"
+          value=""
+        />
+        <button
+          class="sc-eXBvqI bsbuvm"
+        >
+          Sign In
+        </button>
+        <a
+          href="/register"
+        >
+          Need a new account?
+        </a>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;

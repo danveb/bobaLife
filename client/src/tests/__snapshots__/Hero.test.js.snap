@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-lkwKjF jEHleu"
+  >
+    <div
+      class="sc-bczRLJ gArTQT"
+    >
+      <div
+        class="sc-gsnTZi dxBDGR"
+      >
+        <div
+          class="sc-dkzDqf kUKnfZ"
+          id="1"
+        >
+          <h1
+            class="sc-hKMtZM dWEvLW"
+          >
+            Welcome to bobaLife
+          </h1>
+          <p
+            class="sc-eCYdqJ dWCBFq"
+          >
+            Summer | 2022
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-jmNpzm pKHyx"
+    >
+      <div
+        class="sc-dUWWNf dOjGQv"
+      >
+        <div
+          class="sc-hsOonA iXPqPC"
+        >
+          <div
+            class="sc-caXVBt czmWRy hero-card"
+          >
+            <img
+              alt="shop"
+              class="sc-hjriPb SIHhQ"
+              src="shop.webp"
+            />
+          </div>
+          <div
+            class="sc-caXVBt czmWRy hero-card"
+          >
+            <img
+              alt="boba"
+              class="sc-hjriPb SIHhQ"
+              src="boba.webp"
+            />
+          </div>
+          <div
+            class="sc-caXVBt czmWRy hero-card"
+          >
+            <img
+              alt="matcha"
+              class="sc-hjriPb SIHhQ"
+              src="matcha.webp"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-gUAEMC fXYstC"
+      >
+        <div
+          class="sc-fWjsSh ihyOVx"
+        >
+          <h1
+            class="sc-fHsOPI bGndbl"
+          >
+            let's #bobaLife
+          </h1>
+          <img
+            alt="milk tea"
+            class="sc-hjriPb sc-gzzPqb SIHhQ fWmbDw"
+            src="boba2.webp"
+          />
+        </div>
+        <div
+          class="sc-gkJlnC kPHFC"
+        >
+          <h3
+            class="sc-fmrZth ixuRQN"
+          >
+            Why bobaLife?
+          </h3>
+          <p
+            class="sc-eXBvqI cAbMrS"
+          >
+            We have only one obsession, and you guessed it right: boba. Some call it boba, some call it bubble tea, but we all know this word is interchangeable. Life is so short and we are just passionate to share boba to the world. This is exactly what makes us who we are. We want to welcome you to a friendly atmosphere delicately curated to serve you a world-class boba on every single cup. 
+            <span>
+              Welcome to bobaLife.
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

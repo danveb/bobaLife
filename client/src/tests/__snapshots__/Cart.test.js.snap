@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-tsFYE ibxtCw"
+  >
+    <div
+      class="sc-crXcEl bjHRtD"
+    >
+      <div
+        class="sc-evZas kjfDWn"
+      >
+        <div
+          class="sc-breuTD hemlwj"
+          id="1"
+        >
+          <h1
+            class="sc-ksZaOG dqsHfU"
+          >
+            Your Basket
+          </h1>
+          <p
+            class="sc-hAZoDl dGRemi"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-bhVIhj kMbmKo"
+    >
+      <div
+        class="sc-fmrZth czQLNO"
+      >
+        <h3
+          class="sc-eXBvqI dDmXWq"
+        >
+          Your Basket Is Empty...
+        </h3>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
