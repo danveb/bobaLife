@@ -1,12 +1,12 @@
 # bobaLife 
 
 ## Intro 
-bobaLife is an e-commerce web app designed for a fictitous boba shop. This app incorporates working cart/checkout process and integration of Stripe mobile payments. 
+bobaLife is an e-commerce app designed for a fictitious boba shop. This app incorporates a working cart/checkout process as well as integration with Stripe mobile payments. Users are greeted with a modern landing page and access to online shop. 
 
 ## Features
-- Login/Registration (user state in localStorage)
-- Shop/Cart/Checkout functionality 
-- Connect frontend with backend to create Stripe Checkout Session and allow mobile payments
+- Login/Registration
+- Shop/Cart with redux toolkit/redux-persist
+- Checkout with Stripe - client/server integration for checkout session to allow mobile payments
 
 ## Live App 
 - [Netlify](https://bobalife.netlify.app/) - https://bobalife.netlify.app
@@ -31,12 +31,14 @@ bobaLife is an e-commerce web app designed for a fictitous boba shop. This app i
 ## Stripe Checkout Session
 ```sh
 Refer to Stripe documentation for card information
+https://stripe.com/docs/testing
 ```
 <img src="https://media.giphy.com/media/28PmCoGvXRmIyWADX0/giphy.gif">
 
 ## Stripe Payment (Test CC)
 ```sh
 Refer to Stripe documentation for card information
+https://stripe.com/docs/testing
 ```
 <img src="https://media.giphy.com/media/RMJfo4MUYLHpciQCBx/giphy.gif">
 
@@ -52,6 +54,12 @@ server (Node/Express)
 
 ```sh
 $ yarn create react-app ./ 
+```
+
+## Install client/server dependencies
+
+```sh
+$ yarn install
 ```
 
 ## Install client dependencies
