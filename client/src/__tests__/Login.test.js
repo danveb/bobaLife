@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import Login from "../components/Login/Login"; 
 
 // smoke test
-test("renders without crashing", () => {
+test("renders Login component without crashing", () => {
     render(
         <Provider store={store}>
             <BrowserRouter>
@@ -36,19 +36,21 @@ test("should display header display", () => {
             </BrowserRouter>
         </Provider>
     ); 
-    expect(getByText("Enter your account", { exact: true })).toBeInTheDocument(); 
+    const paragraphTag = getByText("Enter your account", { exact: true }); 
+    expect(paragraphTag).toBeInTheDocument(); 
 });
 
 // getByLabelText
 test("should find email label", () => {
-    render(
+    const { getByLabelText } = render(
         <Provider store={store}>
             <BrowserRouter>
                 <Login />
             </BrowserRouter>
         </Provider>
     );
-    screen.getByLabelText("Email"); 
+    const label = getByLabelText("Email"); 
+    expect(label).toBeInTheDocument(); 
 }); 
 
 // getByLabelText
@@ -60,10 +62,10 @@ test("email input field accepts correct value", () => {
             </BrowserRouter>
         </Provider>
     ); 
-    const emailInputNode = getByLabelText("Email"); 
-    expect(emailInputNode.value).toMatch(""); 
-    fireEvent.change(emailInputNode, { target: { value: "hello@gmail.com" }}); 
-    expect(emailInputNode.value).toMatch("hello@gmail.com"); 
+    const emailInput = getByLabelText("Email"); 
+    expect(emailInput.value).toMatch(""); 
+    fireEvent.change(emailInput, { target: { value: "hello@gmail.com" }}); 
+    expect(emailInput.value).toMatch("hello@gmail.com"); 
 }); 
 
 // getByLabelText
@@ -108,6 +110,21 @@ test("displays link to navigate to register page", () => {
     const newAccountText = getByText("Need a new account?"); 
     expect(newAccountText).toBeInTheDocument(); 
 }); 
+
+// getByLabelText
+test("displays initial state for username/password", () => {
+    const { getByLabelText } = render(
+        <Provider store={store}>
+            <BrowserRouter>
+                <Login />
+            </BrowserRouter>
+        </Provider>
+    );
+    const emailInput = getByLabelText("Email");
+    const passwordInput = getByLabelText("Password");
+    expect(emailInput.value).toBe(""); 
+    expect(passwordInput.value).toBe(""); 
+});
 
 // mock login functionality
 test("mock login functionality", () => {

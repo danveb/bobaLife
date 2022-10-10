@@ -43,6 +43,12 @@ https://stripe.com/docs/testing
 <img src="https://media.giphy.com/media/RMJfo4MUYLHpciQCBx/giphy.gif">
 
 ---
+
+## Test Coverage
+- Performed testing with react-testing-library 
+```sh
+$ yarn test --watch
+```
 ## Project structure 
 
 ```sh
