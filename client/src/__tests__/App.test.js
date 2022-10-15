@@ -3,21 +3,23 @@ import { store } from "../app/store";
 import { Provider } from "react-redux";
 import App from "../App"; 
 
-// smoke test
-test("renders without crashing", () => {
-    render(
-        <Provider store={store}>
-            <App />
-        </Provider>
-    ); 
-}); 
+describe("App component", () => {
+    // smoke test
+    test("renders without crashing", () => {
+        render(
+            <Provider store={store}>
+                <App />
+            </Provider>
+        ); 
+    }); 
 
-// snapshot test
-test("matches snapshot", () => {
-    const { asFragment } = render(
-        <Provider store={store}>
-            <App />
-        </Provider>
-    ); 
-    expect(asFragment()).toMatchSnapshot(); 
+    // snapshot test
+    test("matches snapshot", () => {
+        const { asFragment } = render(
+            <Provider store={store}>
+                <App />
+            </Provider>
+        ); 
+        expect(asFragment()).toMatchSnapshot(); 
+    });
 });

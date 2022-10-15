@@ -1,40 +1,43 @@
-import { render } from "@testing-library/react"; 
+import { render, screen } from "@testing-library/react"; 
 import { store } from "../app/store"; 
-import { Provider, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import Cart from "../components/Cart/Cart"; 
 
-// smoke test
-test("renders without crashing", () => {
-    render(
-        <Provider store={store}>
-            <BrowserRouter>
-                <Cart />
-            </BrowserRouter>
-        </Provider>
-    ); 
-}); 
+describe("Cart component", () => {
+    // smoke test
+    test("renders without crashing", () => {
+        render(
+            <Provider store={store}>
+                <BrowserRouter>
+                    <Cart />
+                </BrowserRouter>
+            </Provider>
+        ); 
+    }); 
 
-// snapshot test
-test("matches snapshot", () => {
-    const { asFragment } = render(
-        <Provider store={store}>
-            <BrowserRouter>
-                <Cart />
-            </BrowserRouter>
-        </Provider>
-    ); 
-    expect(asFragment()).toMatchSnapshot(); 
-});
+    // snapshot test
+    test("matches snapshot", () => {
+        const { asFragment } = render(
+            <Provider store={store}>
+                <BrowserRouter>
+                    <Cart />
+                </BrowserRouter>
+            </Provider>
+        ); 
+        expect(asFragment()).toMatchSnapshot(); 
+    });
 
-// getByText
-test("should display message when cart is empty", () => {
-    const { getByText } = render(
-        <Provider store={store}>
-            <BrowserRouter>
-                <Cart />
-            </BrowserRouter>
-        </Provider>
-    ); 
-    expect(getByText('Your Basket Is Empty', { exact: false })).toBeInTheDocument(); 
+    // getByText
+    test("should display message when cart is empty", () => {
+        render(
+            <Provider store={store}>
+                <BrowserRouter>
+                    <Cart />
+                </BrowserRouter>
+            </Provider>
+        ); 
+        const message = screen.getByText('Your Basket Is Empty', { exact: false })
+        expect(message).toBeInTheDocument(); 
+    });
 });

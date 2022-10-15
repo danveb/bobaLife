@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshot 1`] = `
+exports[`Drinks component matches snapshot 1`] = `
 <DocumentFragment>
   <div
     class="sc-hjriPb cXGACq"

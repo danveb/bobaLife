@@ -45,9 +45,9 @@ https://stripe.com/docs/testing
 ---
 
 ## Test Coverage
-- Performed testing with react-testing-library 
+- Performed component testing with react-testing-library 
 ```sh
-$ yarn test --watch
+$ yarn test --watchAll
 ```
 ## Project structure 
 
