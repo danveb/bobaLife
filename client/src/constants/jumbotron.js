@@ -2,7 +2,7 @@ export const heroJumbotron = [
     {
         id: 1, 
         head: "Welcome to bobaLife", 
-        text: "Summer | 2022", 
+        text: "Spring | 2023", 
     }, 
 ]; 
 
@@ -10,7 +10,7 @@ export const aboutJumbotron = [
     {
         id: 1, 
         head: "Our Story", 
-        text: "EST. 2022", 
+        text: "EST. 2023", 
     }, 
 ]; 
 
@@ -18,7 +18,7 @@ export const drinksJumbotron = [
     {
         id: 1, 
         head: "Want Drinks?", 
-        text: "Summer | 2022", 
+        text: "Spring | 2023", 
     }, 
 ]; 
 
@@ -26,7 +26,7 @@ export const shopJumbotron = [
     {
         id: 1, 
         head: "bobaLife Shop", 
-        text: "Summer | Fall 2022"
+        text: "Spring | Summer 2023"
     }, 
 ]; 
 
