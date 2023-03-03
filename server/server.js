@@ -30,10 +30,12 @@ app.use("/api/products", productRoute);
 app.post("/create-checkout-session", createCheckoutSession); 
 
 // Error Middleware
-app.use(notFound);  
+// app.use(notFound);  
 app.use(errorHandler);
 
-// Test 123 
-app.get('/', (req, res) => { res.send('Hello from Express!') })
+// Test GET 
+app.get("/", (req, res) => {
+    res.send("Hello from Express!"); 
+}); 
 
-app.listen(port, () => console.log(`Server started on port ${port}`)); 
+app.listen(port, () => console.log(`Server started on port ${port}`.blue.underline)); 
